@@ -1,0 +1,19 @@
+
+body {
+	
+	background-color : #323232;
+	font: 14px Arial;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+.table_content {
+
+	color  :mediumorchid;
+}
+
+
+.table_title {
+	color :mediumorchid; 
+}
