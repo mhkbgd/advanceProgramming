@@ -46,7 +46,7 @@
 			</div>
 			<div>
 				<input type="submit" value="Log in" />
-				<a href="game/game.php">Play the game </a>
+				<a href="game/index.php">Play the game </a>
 			</div>
 		</form>
 		

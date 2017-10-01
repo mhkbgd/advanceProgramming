@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Pationt's info</title>
+  <title>Patient's info</title>
   
   
   <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
@@ -40,9 +40,9 @@ $tmp = 0 ;
     <?php 
     $sql = "SELECT * from Users join Pictures where Users.Id = Pictures.pation_id and Users.Id =".$_SESSION["person_id"].";";
     
-    $result = mysql_query( $sql);
-    if (mysql_num_rows($result) > 0) {
-        while($row = mysql_fetch_assoc($result)) {
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
             
     ?>
     

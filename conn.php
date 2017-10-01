@@ -6,7 +6,7 @@
 
 // Create connection
 $conn=mysqli_connect($mysql_hostname, $mysql_user, $mysql_password); 
-$db_selected = mysqli_select_db($mysql_database, $conn); 
+$db_selected = mysqli_select_db($conn,$mysql_database); 
 
 
 // Check connection

@@ -17,7 +17,7 @@ $person_id= $arr[1];
 
 
 $sql = "DELETE FROM Pictures WHERE Id ='".$picture_id."';";
-$result = mysqli_query( $sql);
+$result = mysqli_query($conn, $sql);
 
 
 

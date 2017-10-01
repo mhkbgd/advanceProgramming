@@ -48,7 +48,7 @@ $file = $_FILES['file']['tmp_name'];
 
            $sql = "INSERT INTO `Pictures` (`Id`, `Name`, `Person_name`, `Relation`, `pation_id`) VALUES ('$random', '$image_Path' , '$name' , '$relTyp' , $personID);";
            echo $sql;
-          $result =  mysql_query($sql);
+          $result =  mysqli_query($conn,$sql);
          
           http://localhost/ow/admin/Admin_edit.php?edit_btn=4
           $goto =  "Admin_edit.php?edit_btn=".$personID ;

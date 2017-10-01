@@ -39,11 +39,12 @@
 
 
 <div class="container">
-  <h2 class = "table_title">Current Pationts</h2>
+  <h2 class = "table_title">Current Patients</h2>
           
   <table class="table">
     <thead>
       <tr>
+       <th class = "table_content" style="text-align: center;">Patient ID</th>
         <th class = "table_content" style="text-align: center;">Firstname</th>
         <th class = "table_content" style="text-align: center;">Lastname</th>
         <th class = "table_content" style="text-align: center;">Age</th>
@@ -53,14 +54,15 @@
     <tbody>
 
 <?php 
-    $sql = "SELECT *  FROM users";
-    echo $sql;
-    $result = mysqli_query( $sql);
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($conn, $sql);
+    
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
 ?>
        
             <tr>
+               <td class = "table_content" style="text-align: center;"><?php echo $row['Id'] ?></td>
                 <td class = "table_content" style="text-align: center;"><?php echo $row['First_name'] ?></td>
                 <td class = "table_content" style="text-align: center;"><?php echo $row['Last_name']  ?> </td>
                 <td class = "table_content" style="text-align: center;"><?php echo $row['Age']  ?></td>
@@ -94,6 +96,7 @@
 ?>
    <form action = "Add_Person.php" method = "get">
    <tr>
+<td class = "table_content" style="text-align: center;"><input  name = "first_name" id="first_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="First name " name = "first_name" id="first_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="Last name " name = "Last_name" id="Last_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="Age " name = "Age" id="Age" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
