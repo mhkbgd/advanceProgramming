@@ -48,7 +48,7 @@ $file = $_FILES['file']['tmp_name'];
         
            $result = move_uploaded_file($tmpName,$image_Path);
 
-           $sql = "INSERT INTO `Pictures` (`Id`, `Name`, `Person_name`, `Relation`, `option_one` , `option_two` , `option_three` , `pation_id`) VALUES ('$random', '$image_Path' , '$name' , '$relTyp' , '$optOne' , '$optTwo' , '$optThree' ,$personID);";
+           $sql = "INSERT INTO `Pictures` (`id`, `image_location`, `relation`, `answer`, `option1` , `option2` , `option3` , `patient_id`) VALUES ('$random', '$image_Path' ,'$relTyp' , '$name' ,  '$optOne' , '$optTwo' , '$optThree' ,$personID);";
            echo $sql;
           $result =  mysqli_query($conn,$sql);
          

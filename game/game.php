@@ -1,47 +1,26 @@
+<!DOCTYPE html>
+<head>
+ 
+    <title>Memory Testing Game</title>
+    <link href="css/style.css"rel="stylesheet"type="text/css"/>
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 	<script src="js/jquery.js"></script>
+    <script src="js/controller.js"></script>
+ 
+</head>
+<body>
 
-	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<div id="topbar">Memory Test Game <input type="text" id="txt"></div>
 
-	 
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script type="text/javascript" src="script.js"></script>
-	<?php 
+<div class="spacer"></div>
 
-	include '../conn.php'; 
-	include 'header.php';
+<div id="navContent">
 
-	$_SESSION["patient_id"] = $_GET['patient'] ; 
-	$tmp = 0;
+<div id="game1"></div>
 
-	$sql = "SELECT * from Users join Pictures where Users.Id = Pictures.pation_id and Users.Id =".$_SESSION["patient_id"].";";
-	
-	$result = mysqli_query($conn, $sql);
-    	if (mysqli_num_rows($result) > 0) {
-        		while($row = mysqli_fetch_assoc($result)) {
-		
-						$tmp++;
-	
-			
-        	 ?>
+<div id="game2"></div>
 
-			<div class="col-md-12" style="padding-bottom: 20px" id= <?php echo $tmp ?> >
+</div>
 
-				<div class="col-md-1">
-					
-				</div>
-
-				<div class="img-container col-md-4" >
-	            	<img class="img-responsive" src=http://localhost/advanceProgramming/admin/<?php echo $row['Name']; ?>>
-	        	</div>
-
-	        	<div class="col-md-7">
-	        		<h2>Who is this person</h2>
-	        	</div>
-
-			</div>
-
-
-        	 <?php
-
-        	        }};
-
-         ?>
+</body>
+</html>

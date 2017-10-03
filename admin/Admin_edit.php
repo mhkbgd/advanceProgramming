@@ -38,7 +38,7 @@ $tmp = 0 ;
 
 
     <?php 
-    $sql = "SELECT * from Users join Pictures where Users.Id = Pictures.pation_id and Users.Id =".$_SESSION["person_id"].";";
+    $sql = "SELECT * from Users join Pictures where Users.Id = Pictures.patient_id and Users.Id =".$_SESSION["person_id"].";";
     
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -51,15 +51,15 @@ $tmp = 0 ;
 <div class="col-md-4 col-sm-6 col-xs-12">
 <article class="material-card Red">
     <h2>
-        <span> <?php echo $row['Relation']; ?></span>
+        <span> <?php echo $row['relation']; ?></span>
         <strong>
             <i class="fa fa-fw fa-star"></i>
-           <?php echo $row['Person_name']; ?>
+           <?php echo $row['answer']; ?>
         </strong>
     </h2>
     <div class="mc-content">
         <div class="img-container">
-            <img class="img-responsive" src=" <?php echo $row['Name']; ?>">
+            <img class="img-responsive" src=" <?php echo $row['image_location']; ?>">
         </div>
         <div class="mc-description">
             If you are sure that you want to remove this reletive from the database please tab on the remove button below . 
@@ -71,8 +71,8 @@ $tmp = 0 ;
 
     <?php 
 
-            if ($tmp < $row['Id'] ){
-                $tmp = $row['Id'] ; 
+            if ($tmp < $row['id'] ){
+                $tmp = $row['id'] ; 
 
             }
 
@@ -81,7 +81,7 @@ $tmp = 0 ;
     <div class="mc-footer">
      <form action = "removeAction.php" method = "get">   
     <button type="submit" class="btn btn-danger" >Remove</button>
-    <input id = "<?php  echo $row['Id'] ?>" value = "<?php echo $row['Id'] .",". $_SESSION["person_id"] ?>" style= "visibility :hidden ;" name = "id"></input>
+    <input id = "<?php  echo $row['id'] ?>" value = "<?php echo $row['id'] .",". $_SESSION["person_id"] ?>" style= "visibility :hidden ;" name = "id"></input>
     </form>
     </div>
 </article>

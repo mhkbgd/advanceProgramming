@@ -96,7 +96,7 @@
 ?>
    <form action = "Add_Person.php" method = "get">
    <tr>
-<td class = "table_content" style="text-align: center;"><input  name = "first_name" id="first_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
+<td class = "table_content" style="text-align: center;visibility: hidden;"><input   style= " border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="First name " name = "first_name" id="first_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="Last name " name = "Last_name" id="Last_name" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>
    <td class = "table_content" style="text-align: center;"><input placeholder="Age " name = "Age" id="Age" style= "border: 0;outline: 0; background: transparent; border-bottom: 1px solid white;text-align:center;"></input></td>

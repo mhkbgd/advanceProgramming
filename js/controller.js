@@ -11,6 +11,7 @@ $(document).ready(function () {
 	var t;
 	var timer_is_on = 0;
 	var number_of_attempt=0;
+	var current_user_id  = location.search.split('patient=')[1];
 
 	function timedCount() {
 	    document.getElementById("txt").value = c;
@@ -29,11 +30,12 @@ $(document).ready(function () {
 	    timer_is_on = 0;
 	}
 	 
-	$.getJSON('ajaxResponse.php?patient_id=1', function(data) {
-
+	$.getJSON("ajaxResponse.php?patient_id="+current_user_id,
+	 function(data) {
+		console.log("test");
 		for(i=0;i<data.quizlist.length;i++){ 
 			questionBank[i]=new Array;
-			questionBank[i][0]=data.quizlist[i].image_location;
+			questionBank[i][0]="admin/"+data.quizlist[i].image_location;
 			questionBank[i][1]=data.quizlist[i].answer;
 			questionBank[i][2]=data.quizlist[i].option1;
 			questionBank[i][3]=data.quizlist[i].option2;

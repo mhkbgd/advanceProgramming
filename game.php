@@ -6,11 +6,21 @@
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  	<script src="js/jquery.js"></script>
     <script src="js/controller.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  
 </head>
 <body>
+<?php 
+    include 'game/header.php';
+    $tmp = 0 ; 
+  ?>
+  
+<div id="topbar">
 
-<div id="topbar">Memory Test Game <input type="text" id="txt"></div>
+	Memory Test Game 
+</div>
+<div id="timer"> Timer: <input type="text" id="txt"></div>
+
 
 <div class="spacer"></div>
 
