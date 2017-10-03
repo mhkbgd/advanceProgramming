@@ -136,6 +136,9 @@ $tmp = 0 ;
             <form action="addRel.php" method="post" id ="form" enctype="multipart/form-data">
                 <input placeholder = "Name :" name = "name"  style="width:46%; height :30px;margin-left :27%;"  ></input></br></br>
                 <input placeholder = "Type of the relationship" name = "relTyp" style="width:46%; height :30px;margin-left :27%;"></input> </br></br>
+                <input placeholder = "Option One" name = "optOne" style="width:46%; height :30px;margin-left :27%;"></input> </br></br>
+                <input placeholder = "Option Two" name = "optTwo" style="width:46%; height :30px;margin-left :27%;"></input> </br></br>
+                <input placeholder = "Option Three" name = "optThree" style="width:46%; height :30px;margin-left :27%;"></input> </br></br>
                 <p><font size = 2.7 >Note : Before uploading u may rename the photo to the relation type ex : father.png , mother.jpg</font></p>
                 <input name = "file" id = "file" type = "file" style="margin-left :27%;"></input> 
                 <input name = "personID" id= "personID" value = "<?php echo $_SESSION["person_id"]   ?>" style="visibility:hidden " ></input>

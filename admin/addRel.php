@@ -10,7 +10,9 @@ if ($conn) {
 $name = $_POST['name'];
 
 $relTyp = $_POST['relTyp'];
-
+$optOne = $_POST['optOne'];
+$optTwo = $_POST['optTwo'];
+$optThree = $_POST['optThree'];
 $personID = $_POST['personID'];
 
 
@@ -46,7 +48,7 @@ $file = $_FILES['file']['tmp_name'];
         
            $result = move_uploaded_file($tmpName,$image_Path);
 
-           $sql = "INSERT INTO `Pictures` (`Id`, `Name`, `Person_name`, `Relation`, `pation_id`) VALUES ('$random', '$image_Path' , '$name' , '$relTyp' , $personID);";
+           $sql = "INSERT INTO `Pictures` (`Id`, `Name`, `Person_name`, `Relation`, `option_one` , `option_two` , `option_three` , `pation_id`) VALUES ('$random', '$image_Path' , '$name' , '$relTyp' , '$optOne' , '$optTwo' , '$optThree' ,$personID);";
            echo $sql;
           $result =  mysqli_query($conn,$sql);
          
