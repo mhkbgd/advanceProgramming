@@ -55,13 +55,13 @@ CREATE TABLE `pictures` (
 -- Dumping data for table `pictures`
 --
 
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+INSERT INTO pictures(id,image_location,answer,option1,option2,patient_id) 
 VALUES(1,"https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2015/04/17/mia-khalifa-wnba.jpg?itok=d72qTwYn","Mia Khalifa","Pamela Andersan","Sara Jay",1);
 
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+INSERT INTO pictures(id,image_location,answer,option1,option2,patient_id) 
 VALUES(2,"http://morungexpress.com/wp-content/uploads/2016/09/Sunny-Leone-1.jpg","Sunney Leone","Pamela Andersan","Sara Jay",1);
 
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+INSERT INTO pictures(id,image_location,answer,option1,option2,patient_id) 
 VALUES(3,"http://cdn.eldeforma.com/wp-content/uploads/2016/12/J4.jpg","Johny Sins","Jack","John",1);
 
 
