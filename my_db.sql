@@ -27,11 +27,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `participation` (
-  `ID` int(128) NOT NULL,
-  `userID` int(128) NOT NULL,
-  `attempts` int(128) NOT NULL,
-  `time` int(128) NOT NULL,
-  `questions` int(128) NOT NULL
+  `participation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `number_of_attempts` int(11) NOT NULL,
+  `complete_time` int(11) NOT NULL,
+  `number_of_questions` int(11) NOT NULL,
+  `timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (participation_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -41,22 +43,27 @@ CREATE TABLE `participation` (
 --
 
 CREATE TABLE `pictures` (
-  `Id` varchar(650) NOT NULL,
-  `Name` varchar(650) NOT NULL,
-  `Person_name` varchar(650) NOT NULL,
-  `Relation` varchar(650) NOT NULL,
-  `option_one` varchar(128) NOT NULL,
-  `option_two` varchar(128) NOT NULL,
-  `option_three` varchar(128) NOT NULL,
-  `pation_id` int(10) NOT NULL
+  `id` varchar(650) NOT NULL,
+  `image_location` varchar(650) NOT NULL,
+  `answer` varchar(650) NOT NULL,
+  `option1` varchar(650) NOT NULL,
+  `option2` varchar(128) NOT NULL,
+  `patient_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pictures`
 --
 
-INSERT INTO `pictures` (`Id`, `Name`, `Person_name`, `Relation`, `option_one`, `option_two`, `option_three`, `pation_id`) VALUES
-('fd4c8e59b8a7add298869bd9fef2417c59d348ddd8b17', 'Uploaded_images/fd4c8e59b8a7add298869bd9fef2417c59d348ddd8b17', 'Mahmud', 'myself', 'Dad', 'Mom', 'Sister', 3);
+INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+VALUES(1,"https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2015/04/17/mia-khalifa-wnba.jpg?itok=d72qTwYn","Mia Khalifa","Pamela Andersan","Sara Jay",1);
+
+INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+VALUES(2,"http://morungexpress.com/wp-content/uploads/2016/09/Sunny-Leone-1.jpg","Sunney Leone","Pamela Andersan","Sara Jay",1);
+
+INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
+VALUES(3,"http://cdn.eldeforma.com/wp-content/uploads/2016/12/J4.jpg","Johny Sins","Jack","John",1);
+
 
 -- --------------------------------------------------------
 
