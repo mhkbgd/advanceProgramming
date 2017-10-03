@@ -16,16 +16,16 @@
 
 
 <body>
- <div class=" col-md-12" style="text-align: center;">
-    <h1>Select Patient</h1>      
-    <p>Please enter a patient name below</p>
+ <div class=" col-md-12">
+   
   </div>
-  <dev class ="col-md-3">
+  <dev class ="col-md-4">
     
 
   </dev>
-	 <dev class = "col-md-6" >
-  
+	 <dev class = "col-md-4" style="padding-top: 50px; text-align: center" >
+   <h1>Select Patient</h1>      
+    <p>Please enter a patient ID below</p>
    <?php include '../conn.php' ;
    
     $tmp = 0 ; 
@@ -34,7 +34,7 @@
 
  <form action = "game.php">
     <div class="form-group">
-      <label for="usr">Name:</label>
+      
       <input name="patient" type="text" class="form-control" id="usr"><br>
       <button type="submit"  class="btn btn-info btn-md btn-block"  >PLAY</button>
     </div>
