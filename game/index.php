@@ -32,11 +32,11 @@
   	?> 
 
 
- <form action = "game.php">
+ <form action = "http://localhost/advanceProgramming/game.php">
     <div class="form-group">
       
       <input name="patient" type="text" class="form-control" id="usr"><br>
-      <button type="submit"  class="btn btn-info btn-md btn-block"  >PLAY</button>
+      <button type="submit" name ="play"  class="btn btn-info btn-md btn-block"  >PLAY</button>
     </div>
     
   </form>

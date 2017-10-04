@@ -57,8 +57,26 @@ margin-top:50px;
 color:#FFF;
 font-size:36px;
 font-family:Arial, Helvetica, sans-serif;
-width:800px;
-border-bottom:solid white 1px;
+width:fit-content;
+
+}
+#timer{
+height:50px;
+margin:auto;
+color:#FFF;
+font-size:36px;
+font-family:Arial, Helvetica, sans-serif;
+padding-left: 20px;
+
+}
+#txt{
+	background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    height:30px;
+   
+    -webkit-transition:height 1s;
 }
  
 .spacer{

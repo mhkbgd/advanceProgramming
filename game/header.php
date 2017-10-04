@@ -11,7 +11,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     
-      <li><a href="index.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+      <li><a href="gameIndex.php"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
     </ul>
   </div>
 </nav>

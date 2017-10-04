@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2017 at 10:30 AM
+-- Generation Time: Oct 03, 2017 at 10:18 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -27,13 +27,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `participation` (
-  `participation_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `number_of_attempts` int(11) NOT NULL,
-  `complete_time` int(11) NOT NULL,
-  `number_of_questions` int(11) NOT NULL,
-  `timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (participation_id)
+  `ID` int(128) NOT NULL,
+  `userID` int(128) NOT NULL,
+  `attempts` int(128) NOT NULL,
+  `time` int(128) NOT NULL,
+  `questions` int(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -45,9 +43,11 @@ CREATE TABLE `participation` (
 CREATE TABLE `pictures` (
   `id` varchar(650) NOT NULL,
   `image_location` varchar(650) NOT NULL,
+  `relation` varchar(128) NOT NULL,
   `answer` varchar(650) NOT NULL,
   `option1` varchar(650) NOT NULL,
   `option2` varchar(128) NOT NULL,
+  `option3` varchar(128) NOT NULL,
   `patient_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -55,15 +55,10 @@ CREATE TABLE `pictures` (
 -- Dumping data for table `pictures`
 --
 
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
-VALUES(1,"https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2015/04/17/mia-khalifa-wnba.jpg?itok=d72qTwYn","Mia Khalifa","Pamela Andersan","Sara Jay",1);
-
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
-VALUES(2,"http://morungexpress.com/wp-content/uploads/2016/09/Sunny-Leone-1.jpg","Sunney Leone","Pamela Andersan","Sara Jay",1);
-
-INSERT INTO(id,image_location,answer,option1,option2,patient_id) 
-VALUES(3,"http://cdn.eldeforma.com/wp-content/uploads/2016/12/J4.jpg","Johny Sins","Jack","John",1);
-
+INSERT INTO `pictures` (`id`, `image_location`, `relation`, `answer`, `option1`, `option2`, `option3`, `patient_id`) VALUES
+('1ddbe0e96c1c2847d4ccea51791f156d59d3d016ce6dd', 'Uploaded_images/1ddbe0e96c1c2847d4ccea51791f156d59d3d016ce6dd', 'myself', 'Mahmud', 'one', 'two', 'three', 1),
+('0d5b1c4c7f720f698946c7f6ab08f68759d3e3259f9e1', 'Uploaded_images/0d5b1c4c7f720f698946c7f6ab08f68759d3e3259f9e1', 'relation', 'name2', 'one', 'two', 'three', 1),
+('fd4c8e59b8a7add298869bd9fef2417c59d3e71ca5d46', 'Uploaded_images/fd4c8e59b8a7add298869bd9fef2417c59d3e71ca5d46', 'name', 'name', 'one', 'two', 'three', 2);
 
 -- --------------------------------------------------------
 
@@ -83,19 +78,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id`, `First_name`, `Last_name`, `Age`) VALUES
-(1, 'Ali', 'Mohammad', 100),
-(2, 'Hasam', 'Majid', 230),
-(3, 'mahmud', 'hasan', 21);
+(1, 'Mahmud', 'Khan', 21),
+(2, 'second', 'last', 22);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `pictures`
---
-ALTER TABLE `pictures`
-  ADD UNIQUE KEY `Id` (`Id`);
 
 --
 -- Indexes for table `users`
