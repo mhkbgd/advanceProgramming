@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2017 at 10:18 PM
+-- Generation Time: Oct 04, 2017 at 08:14 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -27,12 +27,31 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `participation` (
-  `ID` int(128) NOT NULL,
+  `id` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `userID` int(128) NOT NULL,
   `attempts` int(128) NOT NULL,
   `time` int(128) NOT NULL,
   `questions` int(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `participation`
+--
+
+INSERT INTO `participation` (`id`, `date`, `userID`, `attempts`, `time`, `questions`) VALUES
+(5, '2017-10-04 04:30:12', 1, 2, 6, 2),
+(6, '2017-10-04 04:34:31', 1, 4, 11, 2),
+(7, '2017-10-04 04:35:47', 1, 2, 4, 2),
+(8, '2017-10-04 04:38:26', 1, 3, 9, 2),
+(9, '2017-10-04 04:46:54', 2, 2, 8, 2),
+(10, '2017-10-04 04:47:57', 2, 1, 3, 1),
+(11, '2017-10-04 05:57:21', 1, 3, 18, 2),
+(12, '2017-10-04 05:59:33', 1, 2, 5, 2),
+(13, '2017-10-04 06:01:07', 1, 2, 16, 2),
+(14, '2017-10-04 06:03:28', 1, 2, 5, 2),
+(15, '2017-10-04 06:04:20', 2, 2, 8, 1),
+(16, '2017-10-04 06:10:25', 1, 2, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -86,11 +105,26 @@ INSERT INTO `users` (`Id`, `First_name`, `Last_name`, `Age`) VALUES
 --
 
 --
+-- Indexes for table `participation`
+--
+ALTER TABLE `participation`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD UNIQUE KEY `Id` (`Id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `participation`
+--
+ALTER TABLE `participation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
