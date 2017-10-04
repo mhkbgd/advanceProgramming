@@ -12,7 +12,7 @@
 <body>
 <?php 
     include 'game/header.php';
-    $tmp = 0 ; 
+   
   ?>
   
 <div id="topbar">
@@ -29,6 +29,7 @@
 <div id="game1"></div>
 
 <div id="game2"></div>
+
 
 </div>
 

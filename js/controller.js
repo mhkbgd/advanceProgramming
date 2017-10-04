@@ -30,9 +30,9 @@ $(document).ready(function () {
 	    timer_is_on = 0;
 	}
 	 
-	$.getJSON("ajaxResponse.php?patient_id="+current_user_id,
+	$.getJSON("ajaxResponse.php?patient_id=1",
 	 function(data) {
-		console.log("test");
+		
 		for(i=0;i<data.quizlist.length;i++){ 
 			questionBank[i]=new Array;
 			questionBank[i][0]="admin/"+data.quizlist[i].image_location;
@@ -65,21 +65,21 @@ $(document).ready(function () {
 		if(rnd==2){
 			q2=questionBank[questionNumber][1];
 			q3=questionBank[questionNumber][2];
-			q1=questionBank[questionNumber][3];
-			q4=questionBank[questionNumber][4];
+			q4=questionBank[questionNumber][3];
+			q1=questionBank[questionNumber][4];
 		}
 		
 		if(rnd==3){
 			q3=questionBank[questionNumber][1];
-			q1=questionBank[questionNumber][2];
-			q4=questionBank[questionNumber][4];
-			q2=questionBank[questionNumber][3];
+			q4=questionBank[questionNumber][2];
+			q1=questionBank[questionNumber][3];
+			q2=questionBank[questionNumber][4];
 		}
 		if(rnd==4){
-			q4=questionBank[questionNumber][4];
-			q3=questionBank[questionNumber][1];
+			q4=questionBank[questionNumber][1];
 			q1=questionBank[questionNumber][2];
 			q2=questionBank[questionNumber][3];
+			q3=questionBank[questionNumber][4];
 		}
 
 		$(stage).append('<div class="questionText">'+'<img src="'+questionBank[questionNumber][0]+'" height="180px">'+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="4" class="option">'+q4+'</div>');
@@ -127,7 +127,14 @@ $(document).ready(function () {
 
 		stopCount();
 		
-		$(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'<br>'+'Number of Attempt: '+number_of_attempt+'</div>');
+		$(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'<br>'+'Number of Attempt: '+number_of_attempt+'</div><br><a href="Gameindex.php"> <button onmouseover="" style="cursor: pointer;" type="submit"  class="btn btn-default btn-lg" >Home</button></a>');
 		
+		$.post('pushData.php', {userId: current_user_id, attempts: number_of_attempt, time: document.getElementById("txt").value, questions: numberOfQuestions}, function(data) {
+		      
+		    });
+
 	}//display final slide
+
+
+	
 });//doc ready

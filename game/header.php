@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  <nav class="navbar navbar-inverse">
   <div class="container-fluid" style = "background-color :##323232; ">
     <div class="navbar-header">
