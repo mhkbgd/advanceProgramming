@@ -82,7 +82,7 @@ $(document).ready(function () {
 			q3=questionBank[questionNumber][4];
 		}
 
-		$(stage).append('<div class="questionText">'+'<img src="'+questionBank[questionNumber][0]+'" height="180px">'+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="4" class="option">'+q4+'</div>');
+		$(stage).append('<div class="questionImage img-container" style="width: 30%;">'+'<img style="width: 100%;height: auto;" class="img-responsive" src="'+questionBank[questionNumber][0]+'" height="180px">'+'</div><div class="questionText"><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="4" class="option">'+q4+'</div></div>');
 
 		 $('.option').click(function(){
 		  if(questionLock==false){questionLock=true;	
@@ -97,7 +97,7 @@ $(document).ready(function () {
 		  if(this.id!=rnd){
 
 		   $(stage).append('<div class="feedback2">WRONG</div>');
-			$(stage).append('<div class="questionText">'+'<img src="'+questionBank[questionNumber][0]+'" height="180px">'+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="4" class="option">'+q4+'</div>');
+			$(stage).append('<div class="questionImage img-container" style="width: 30%;">'+'<img style="width: 100%;height: auto;" src="'+questionBank[questionNumber][0]+'" height="180px">'+'</div><div class="questionText"><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="4" class="option">'+q4+'</div></div>');
 		  	questionNumber--;
 		  	setTimeout(function(){changeQuestion()},1000);
 		  }
@@ -116,8 +116,8 @@ $(document).ready(function () {
 
 		if(questionNumber<numberOfQuestions){displayQuestion();}else{displayFinalSlide();}
 
-		$(stage2).animate({"right": "+=800px"},"slow", function() {$(stage2).css('right','-800px');$(stage2).empty();});
-		$(stage).animate({"right": "+=800px"},"slow", function() {questionLock=false;});
+		$(stage2).animate({"right": "+=1600px"},"slow", function() {$(stage2).css('right','-1600px');$(stage2).empty();});
+		$(stage).animate({"right": "+=1600px"},"slow", function() {questionLock=false;});
 	}//change question
 	
 
@@ -127,7 +127,7 @@ $(document).ready(function () {
 
 		stopCount();
 		
-		$(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'<br>'+'Number of Attempt: '+number_of_attempt+'</div><br><a href="Gameindex.php"> <button onmouseover="" style="cursor: pointer;" type="submit"  class="btn btn-default btn-lg" >Home</button></a>');
+		$(stage).append('<div class="finalText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'<br>'+'Number of Attempt: '+number_of_attempt+'<br><a href="Gameindex.php"> <button onmouseover="" style="cursor: pointer;" type="submit"  class="btn btn-default btn-lg" >Home</button></a></div>');
 		
 		$.post('pushData.php', {userId: current_user_id, attempts: number_of_attempt, time: document.getElementById("txt").value, questions: numberOfQuestions}, function(data) {
 		      

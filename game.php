@@ -7,7 +7,7 @@
  	<script src="js/jquery.js"></script>
     <script src="js/controller.js"></script>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="admin/css/style.css">
  
 </head>
 <body>

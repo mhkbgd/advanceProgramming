@@ -7,37 +7,57 @@ html, body {
 
 #navContent{
 margin:auto;	
-width:800px;
-height:400px;
+width:1600px;
+height:700px;
 position:relative;
 overflow:hidden;
 }
 
 #game1{
 margin:auto;
-width:800px;
-height:600px;
+width:1600px;
+height:700px;
 right:0px;
 position:absolute;
 }
 
 #game2{
 margin:auto;	
-width:800px;
-height:600px;
-right:-800px;
+width:1600px;
+height:700px;
+right:-1600px;
 position:absolute;
 } 
 
 .questionText{
 font-size:27px;
 color:#FFF;
+height: 700px;
+float: right;
+
+}
+.finalText{
+    font-size: 27px;
+    color: #FFF;
+    height: 700px;
+    height: inherit;
+    width: inherit;
+    text-align: center;
+
 }
 
-.option{width:400px;
-height:30px;
-margin:15px;
-font-size:18px;
+.questionImage{
+height: 700px;
+float: left;
+
+}
+
+.option{
+    width: 650px;
+    height: 120px;
+    margin: 15px;
+    font-size: 70px;
+    text-align: center;
 color:#FFFFFF; 
 padding:2px;
 padding-left:10px;
@@ -89,7 +109,9 @@ height:30px;
 
 
 .feedback1{
-width:150px;
+	margin-top: 600px;
+height: 100px;
+width:inherit;
 padding:5px;
 font-size:30px;
 color:#FFFFCC;
@@ -99,7 +121,9 @@ text-align:center;
 }
 
 .feedback2{
-width:150px;
+	margin-top: 600px;
+	height: 100px;
+width:inherit;
 padding:5px;
 font-size:30px;
 color:#FFFFCC;
