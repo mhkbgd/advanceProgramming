@@ -30,7 +30,7 @@ $(document).ready(function () {
 	    timer_is_on = 0;
 	}
 	 
-	$.getJSON("ajaxResponse.php?patient_id=1",
+	$.getJSON("ajaxResponse.php?patient_id="+current_user_id,
 	 function(data) {
 		
 		for(i=0;i<data.quizlist.length;i++){ 
